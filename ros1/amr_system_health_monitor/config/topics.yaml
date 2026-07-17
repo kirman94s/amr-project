@@ -1,0 +1,19 @@
+startup_grace_sec: 8.0
+publish_rate_hz: 1.0
+rate_window_size: 20
+
+topics:
+  - name: /scan
+    timeout_sec: 1.0
+    min_rate_hz: 5.0
+    required: true
+
+  - name: /imu/data
+    timeout_sec: 1.0
+    min_rate_hz: 10.0
+    required: false
+
+  - name: /odom
+    timeout_sec: 1.0
+    min_rate_hz: 5.0
+    required: true
