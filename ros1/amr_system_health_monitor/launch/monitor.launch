@@ -1,0 +1,11 @@
+<launch>
+  <arg name="config" default="$(find amr_system_health_monitor)/config/topics.yaml"/>
+
+  <node
+    pkg="amr_system_health_monitor"
+    type="amr_system_health_monitor_node.py"
+    name="amr_system_health_monitor"
+    output="screen">
+    <rosparam command="load" file="$(arg config)"/>
+  </node>
+</launch>
