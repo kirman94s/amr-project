@@ -6,7 +6,7 @@
     Generic ROS 1 topic-liveness and message-rate monitor for mobile robot diagnostics.
   </description>
 
-  <maintainer email="maintainer@example.com">kirman94s</maintainer>
+  <maintainer email="78927686+kirman94s@users.noreply.github.com">kirman94s</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>catkin</buildtool_depend>
