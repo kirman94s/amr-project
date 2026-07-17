@@ -2,6 +2,10 @@
 
 A practical, open-source reference project for designing and integrating an indoor **Autonomous Mobile Robot (AMR)**.
 
+- [Initial reference architecture](docs/ARCHITECTURE.md)
+- [Development roadmap](ROADMAP.md)
+- [MIT licence](LICENSE)
+
 ## Project goal
 
 This project aims to bridge the gap between small educational robotics examples and expensive proprietary industrial AMR platforms. Many public projects demonstrate isolated functions such as SLAM, LiDAR visualization or motor control, but provide limited guidance on integrating them into one understandable and reproducible mobile-robot system.
@@ -63,13 +67,16 @@ The main intended users are robotics students, engineers, research teams, indepe
 ## Roadmap
 
 - [x] Create the public repository and define its purpose
-- [ ] Publish the initial system architecture
+- [x] Publish the initial system architecture
+- [x] Add an open-source licence
 - [ ] Add repository structure and development conventions
 - [ ] Publish the first reusable software module
 - [ ] Add installation and hardware-integration documentation
 - [ ] Add example configurations and launch files
 - [ ] Add testing and commissioning procedures
 - [ ] Prepare the first tagged pre-release
+
+See the detailed [development roadmap](ROADMAP.md).
 
 ## Safety notice
 
@@ -81,4 +88,4 @@ The project is at an early stage, but technical feedback, architecture discussio
 
 ## Licence
 
-A permissive open-source licence is planned before the first software release. Third-party components will retain their original licences and attribution requirements.
+This repository is licensed under the [MIT License](LICENSE). Third-party components will retain their original licences and attribution requirements.
