@@ -1,49 +1,55 @@
 # Development Roadmap
 
-This roadmap describes the intended public development sequence. Dates are deliberately not fixed until the reusable modules have been separated from private prototype-specific work and validated on hardware.
+This roadmap describes the intended public development sequence. Dates are deliberately not fixed until reusable modules have been separated from private prototype-specific work and validated on hardware. Items listed here are intentions, not guaranteed delivery commitments.
 
 ## Phase 0 — Repository foundation
 
-- [x] Define the project purpose and expected impact
+- [x] Define the project purpose and intended impact
 - [x] Publish the initial architecture outline
 - [x] Publish an honest project-status statement
-- [ ] Add coding, documentation and contribution conventions
-- [ ] Select and document the initial software licence
+- [x] Select and document the initial software licence
+- [ ] Add broader coding, documentation and contribution conventions
 
 ## Phase 1 — Interfaces and repository structure
 
-- [ ] Define package and directory structure
-- [ ] Define naming conventions and coordinate frames
-- [ ] Define generic actuator, brake and sensor-health interfaces
-- [ ] Add example configuration hierarchy
+- [x] Create an initial location for ROS 1 reusable modules
+- [ ] Define repository-wide naming conventions and coordinate frames
+- [ ] Define generic actuator and brake interfaces
+- [x] Publish an initial sensor-health diagnostic interface through standard ROS diagnostics
+- [x] Add an example configuration hierarchy for the first module
 - [ ] Add architecture diagrams
 
-**Exit criterion:** a contributor can understand the system boundaries and create a compatible module without access to the private prototype.
+The repository structure may change as more modules are added.
 
 ## Phase 2 — First reusable module
 
-Candidate first modules:
+The selected first module is the experimental **ROS 1 AMR System Health Monitor**.
 
-- odometry and transform publication;
-- generic mobile-base command interface;
-- actuator-command timeout supervision;
-- brake-control state machine;
-- sensor-health and diagnostic reporting.
+Completed:
 
-Tasks:
+- [x] Publish source code
+- [x] Add an example YAML configuration
+- [x] Add a launch file
+- [x] Add unit tests for the ROS-independent evaluation logic
+- [x] Add installation and usage documentation
+- [x] Document known limitations and safety boundaries
 
-- [ ] Publish source code
-- [ ] Add configuration examples
-- [ ] Add unit or integration tests
-- [ ] Add installation and usage documentation
-- [ ] Validate behaviour on physical hardware
+Outstanding:
 
-**Exit criterion:** the module can be installed, configured and tested independently by another developer.
+- [ ] Run and document a complete catkin build on the target ROS 1 Noetic environment
+- [ ] Validate topic monitoring against the physical AMR hardware
+- [ ] Add ROS-level integration tests
+- [ ] Test against recorded ROS bag data where licensing and privacy permit
+- [ ] Collect independent user feedback
+
+The module is experimental and is not currently claimed to be production-ready, externally adopted or functionally safe.
 
 ## Phase 3 — Perception and localization reference
 
-- [ ] Add 2D LiDAR integration example
-- [ ] Add IMU integration example
+Possible work:
+
+- [ ] Add a 2D LiDAR integration example
+- [ ] Add an IMU integration example
 - [ ] Document calibration and coordinate frames
 - [ ] Publish mapping configuration
 - [ ] Publish localization configuration
@@ -51,7 +57,9 @@ Tasks:
 
 ## Phase 4 — Navigation and motion integration
 
-- [ ] Connect navigation commands to the mobile-base interface
+Possible work:
+
+- [ ] Connect navigation commands to a generic mobile-base interface
 - [ ] Add command limits and timeout behaviour
 - [ ] Document recovery and controlled-stop behaviour
 - [ ] Add repeatable navigation test scenarios
@@ -59,18 +67,22 @@ Tasks:
 
 ## Phase 5 — Diagnostics and commissioning
 
-- [ ] Define structured warnings and faults
-- [ ] Add system-health aggregation
-- [ ] Add commissioning checklist
+Possible work:
+
+- [ ] Define additional structured warnings and faults
+- [ ] Add robot-level system-health aggregation
+- [ ] Add a commissioning checklist
 - [ ] Add verification tests for sensors, actuators and brakes
 - [ ] Document typical integration failures and corrective actions
 
 ## Phase 6 — First public pre-release
 
+Possible work:
+
 - [ ] Complete licence and attribution review
-- [ ] Publish a tested installation procedure
-- [ ] Publish a reference configuration
-- [ ] Create release notes and known-limitations list
+- [ ] Publish a hardware-validated installation procedure
+- [ ] Publish a tested reference configuration
+- [ ] Create release notes and a known-limitations list
 - [ ] Tag the first pre-release
 
 ## Longer-term possibilities
@@ -81,6 +93,8 @@ Tasks:
 - docking and station interaction;
 - fleet or task-management interfaces;
 - community-supported hardware configurations.
+
+These longer-term items may change or may never be implemented.
 
 ## Scope control
 
